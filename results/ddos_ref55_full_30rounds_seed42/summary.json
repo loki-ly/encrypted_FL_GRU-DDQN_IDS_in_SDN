@@ -1,0 +1,88 @@
+{
+ "args": {
+  "data": [
+   "ddos_ref55=Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv"
+  ],
+  "sample_frac": {
+   "ddos_ref55": 1.0
+  },
+  "tag": "ddos_ref55_full_30rounds_seed42",
+  "out": "results",
+  "seed": 42,
+  "window": 1,
+  "group_by": "none",
+  "n_features": 32,
+  "keep_ports": false,
+  "test_frac": 0.3,
+  "test_cap": 2147483647,
+  "mode": "federated",
+  "partition": "domain",
+  "clients": 6,
+  "clients_per_domain": 2,
+  "dirichlet_alpha": 0.3,
+  "agg": "fedprox",
+  "mu": 0.01,
+  "crypto": "tenseal",
+  "clip": 5.0,
+  "rounds": 30,
+  "local_steps": 100,
+  "eval_every": 1,
+  "actions": 3,
+  "hidden": 64,
+  "lr": 0.001,
+  "gamma": 0.3,
+  "batch": 256,
+  "replay": 50000,
+  "target_sync": 50,
+  "balanced": 1,
+  "eps0": 1.0,
+  "eps_min": 0.05,
+  "eps_decay": 0.8,
+  "adv_eps": 0.0,
+  "adv_lambda": 0.5,
+  "adv_eval": false,
+  "byzantine": 0,
+  "byz_scale": 3.0,
+  "explain": true,
+  "shap_grad": false
+ },
+ "final": {
+  "ddos_ref55": {
+   "acc": 0.9994752798507462,
+   "prec": 0.9999066663555545,
+   "rec": 0.9992538183514049,
+   "f1": 0.9995801357561055,
+   "fpr": 0.0001555028573650041,
+   "auc": 0.9999556408020153
+  },
+  "ALL": {
+   "acc": 0.9994752798507462,
+   "prec": 0.9999066663555545,
+   "rec": 0.9992538183514049,
+   "f1": 0.9995801357561055,
+   "fpr": 0.0001555028573650041,
+   "auc": 0.9999556408020153
+  }
+ },
+ "params": 21123,
+ "time_data_s": 3.2427682876586914,
+ "time_train_s": 17.107906579971313,
+ "total_up_MB": 47.238119999999995,
+ "info": {
+  "n_flows": {
+   "ddos_ref55": 221290
+  },
+  "n_engineered": 81,
+  "attack_share": {
+   "ddos_ref55": 0.5784988024763884
+  },
+  "client_sizes": [
+   76800,
+   75882
+  ],
+  "client_domains": [
+   "ddos_ref55",
+   "ddos_ref55"
+  ]
+ }
+}

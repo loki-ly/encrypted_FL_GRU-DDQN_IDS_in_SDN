@@ -1,0 +1,88 @@
+{
+ "args": {
+  "data": [
+   "insdn=Normal_data.csv,OVS.csv,metasploitable-2.csv"
+  ],
+  "sample_frac": {
+   "insdn": 1.0
+  },
+  "tag": "insdn_full_30rounds_seed42",
+  "out": "results",
+  "seed": 42,
+  "window": 8,
+  "group_by": "none",
+  "n_features": 32,
+  "keep_ports": false,
+  "test_frac": 0.3,
+  "test_cap": 2147483647,
+  "mode": "federated",
+  "partition": "domain",
+  "clients": 6,
+  "clients_per_domain": 2,
+  "dirichlet_alpha": 0.3,
+  "agg": "fedprox",
+  "mu": 0.01,
+  "crypto": "tenseal",
+  "clip": 5.0,
+  "rounds": 30,
+  "local_steps": 100,
+  "eval_every": 1,
+  "actions": 3,
+  "hidden": 64,
+  "lr": 0.001,
+  "gamma": 0.3,
+  "batch": 256,
+  "replay": 50000,
+  "target_sync": 50,
+  "balanced": 1,
+  "eps0": 1.0,
+  "eps_min": 0.05,
+  "eps_decay": 0.8,
+  "adv_eps": 0.0,
+  "adv_lambda": 0.5,
+  "adv_eval": false,
+  "byzantine": 0,
+  "byz_scale": 3.0,
+  "explain": true,
+  "shap_grad": false
+ },
+ "final": {
+  "insdn": {
+   "acc": 0.9997503966909733,
+   "prec": 0.9999736126870201,
+   "rec": 0.9996570735181619,
+   "f1": 0.9998153180487033,
+   "fpr": 5.5005500550055004e-05,
+   "auc": 0.9999997315672373
+  },
+  "ALL": {
+   "acc": 0.9997503966909733,
+   "prec": 0.9999736126870201,
+   "rec": 0.9996570735181619,
+   "f1": 0.9998153180487033,
+   "fpr": 5.5005500550055004e-05,
+   "auc": 0.9999997315672373
+  }
+ },
+ "params": 21123,
+ "time_data_s": 3.850754737854004,
+ "time_train_s": 42.494340896606445,
+ "total_up_MB": 47.238119999999995,
+ "info": {
+  "n_flows": {
+   "insdn": 184894
+  },
+  "n_engineered": 81,
+  "attack_share": {
+   "insdn": 0.6532391532445617
+  },
+  "client_sizes": [
+   63125,
+   63125
+  ],
+  "client_domains": [
+   "insdn",
+   "insdn"
+  ]
+ }
+}

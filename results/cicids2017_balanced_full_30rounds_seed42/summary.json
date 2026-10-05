@@ -1,0 +1,88 @@
+{
+ "args": {
+  "data": [
+   "cicids2017=cicids2017_ready.csv"
+  ],
+  "sample_frac": {
+   "cicids2017": 1.0
+  },
+  "tag": "cicids2017_balanced_full_30rounds_seed42",
+  "out": "results",
+  "seed": 42,
+  "window": 1,
+  "group_by": "none",
+  "n_features": 32,
+  "keep_ports": false,
+  "test_frac": 0.3,
+  "test_cap": 2147483647,
+  "mode": "federated",
+  "partition": "domain",
+  "clients": 6,
+  "clients_per_domain": 2,
+  "dirichlet_alpha": 0.3,
+  "agg": "fedprox",
+  "mu": 0.01,
+  "crypto": "tenseal",
+  "clip": 5.0,
+  "rounds": 30,
+  "local_steps": 100,
+  "eval_every": 1,
+  "actions": 3,
+  "hidden": 64,
+  "lr": 0.001,
+  "gamma": 0.3,
+  "batch": 256,
+  "replay": 50000,
+  "target_sync": 50,
+  "balanced": 1,
+  "eps0": 1.0,
+  "eps_min": 0.05,
+  "eps_decay": 0.8,
+  "adv_eps": 0.0,
+  "adv_lambda": 0.5,
+  "adv_eval": false,
+  "byzantine": 0,
+  "byz_scale": 3.0,
+  "explain": true,
+  "shap_grad": false
+ },
+ "final": {
+  "cicids2017": {
+   "acc": 0.9870171874217045,
+   "prec": 0.9936102567289071,
+   "rec": 0.9772553653095939,
+   "f1": 0.9853649518840699,
+   "fpr": 0.005084717827004219,
+   "auc": 0.9887733238320393
+  },
+  "ALL": {
+   "acc": 0.9870171874217045,
+   "prec": 0.9936102567289071,
+   "rec": 0.9772553653095939,
+   "f1": 0.9853649518840699,
+   "fpr": 0.005084717827004219,
+   "auc": 0.9887733238320393
+  }
+ },
+ "params": 21123,
+ "time_data_s": 7.444667100906372,
+ "time_train_s": 21.82986092567444,
+ "total_up_MB": 47.238119999999995,
+ "info": {
+  "n_flows": {
+   "cicids2017": 733569
+  },
+  "n_engineered": 54,
+  "attack_share": {
+   "cicids2017": 0.4586412457451174
+  },
+  "client_sizes": [
+   257024,
+   257024
+  ],
+  "client_domains": [
+   "cicids2017",
+   "cicids2017"
+  ]
+ }
+}
